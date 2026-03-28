@@ -46,3 +46,11 @@ if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
 else
     echo "Skipping the App DB configuration at the moment!"
 fi
+
+# Instructions on manually connecting to the container and the DB terminal
+echo "To access the container run the following command:"
+echo "  docker exec -it finance_app bash"
+echo "To access the DB directly once you are in the container run the following command:"
+echo "  mysql -u root -p"
+echo "If 'mysql' is not available in this image you can access mariadb directly using the full path command:"
+echo "  /usr/bin/mariadb -u root -p"
