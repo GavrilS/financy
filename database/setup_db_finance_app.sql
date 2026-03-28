@@ -35,7 +35,9 @@ CREATE TABLE expenses (
     PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS income (
+DROP TABLE IF EXISTS income;
+
+CREATE TABLE income (
     id UUID DEFAULT UUID_v4(),
     date DATE NOT NULL,
     month VARCHAR(20),
@@ -46,3 +48,5 @@ DROP TABLE IF EXISTS income (
     amount DECIMAL(10, 2),
     PRIMARY KEY (id)
 );
+
+SET FOREIGN_KEY_CHECKS=1;
